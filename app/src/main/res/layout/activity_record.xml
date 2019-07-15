@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="录音" />
+
+
+    <EditText
+        android:id="@+id/et_phone_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="10086" />
+
+    <TextView
+        android:id="@+id/tv_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="拨打" />
+
+    <TextView
+        android:id="@+id/tv_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="播放" />
+
+
+</LinearLayout>

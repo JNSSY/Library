@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1983d1</color>
+    <color name="colorPrimaryDark">#1983d1</color>
+    <color name="colorAccent">#1983d1</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="bg_color">#f1f1f1</color>
+    <color name="bg_toolbar">#1983d1</color>
+    <color name="toolbar_text_color">#4ddb4d</color>
+    <color name="black">#000000</color>
+
+
+    <color name="item_div_color">#dfdfdf</color>
+    <color name="main_bg">#F6F6F6</color>
+    <color name="default_text_color">#333333</color>
+    <color name="gray">#8f8f94</color>
+    <color name="blue_bottom">#379dcc</color>
+    <color name="blue">#45AEDE</color>
+
+    <color name="edittext_border">#006fff</color>
+    <color name="text_buy">#fec12f</color>
+
+
+    <color name="aliPay_bar_color">#1983d1</color>
+    <color name="aliPay_search_bg_color">#11222222</color>
+    <color name="devider">#cec8c8</color>
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#00000000</color>
+    <color name="capture_text_cover_bg">#00000000</color>
+    <color name="seek_bar_text">#fff6f6f6</color>
+
+
+    <color name="div_line">#B3B1B1</color>
+
+
+</resources>

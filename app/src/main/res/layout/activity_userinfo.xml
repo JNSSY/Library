@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ay_edit_back_tb"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/toolbar_bgcolor"
+        app:navigationIcon="@mipmap/back2x">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="@dimen/larger" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_user_icon"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="头像"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smaller" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_user_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/icon_more" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/item_div_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smaller" />
+
+        <EditText
+            android:id="@+id/ay_edit_nick_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="end|center"
+            android:hint="请输入昵称"
+            android:inputType="text"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smaller" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
