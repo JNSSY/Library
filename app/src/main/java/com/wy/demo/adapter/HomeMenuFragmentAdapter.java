@@ -74,6 +74,10 @@ public class HomeMenuFragmentAdapter extends RecyclerView.Adapter<HomeMenuFragme
             holder.tv_menu.setText("下拉菜单");
             holder.iv_view.setImageResource(R.mipmap.icon_dropdown_menu);
         }
+        if (str.equals("query_code")){
+            holder.tv_menu.setText("验证码");
+            holder.iv_view.setImageResource(R.mipmap.icon_query_code);
+        }
     }
 
     @Override

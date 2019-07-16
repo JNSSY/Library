@@ -14,11 +14,12 @@ import com.wy.demo.activity.CustomerViewActivity;
 import com.wy.demo.activity.DropDownActivity;
 import com.wy.demo.activity.HuaweiVoiceActivity;
 import com.wy.demo.activity.OpenBtActivity;
+import com.wy.demo.activity.QueryCodeActivity;
 import com.wy.demo.activity.RecordActivity;
 import com.wy.demo.activity.WangYiMusicActivity;
 import com.wy.demo.adapter.HomeMenuFragmentAdapter;
 import com.wy.demo.myinterface.OnClickListener;
-
+import com.wy.demo.view.QueryCode;
 
 
 public class HomeFragment extends Fragment {
@@ -48,6 +49,7 @@ public class HomeFragment extends Fragment {
         adapter.addData("customer_view");
         adapter.addData("record_voice");
         adapter.addData("下拉菜单");
+        adapter.addData("query_code");
         rv_menu.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rv_menu.setAdapter(adapter);
         adapter.setOnItemClickListener(new OnClickListener() {
@@ -84,6 +86,10 @@ public class HomeFragment extends Fragment {
         }
         if (str.equals("下拉菜单")){
             Intent intent=new Intent(getActivity(), DropDownActivity.class);
+            startActivity(intent);
+        }
+        if (str.equals("query_code")){
+            Intent intent=new Intent(getActivity(), QueryCodeActivity.class);
             startActivity(intent);
         }
     }

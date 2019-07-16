@@ -23,4 +23,12 @@
     </declare-styleable>
 
 
+    <!--验证码-->
+    <declare-styleable name="queryCode">
+        <attr name="text" format="string"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+
+
 </resources>
