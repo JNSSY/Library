@@ -19,8 +19,6 @@ import com.wy.demo.activity.RecordActivity;
 import com.wy.demo.activity.WangYiMusicActivity;
 import com.wy.demo.adapter.HomeMenuFragmentAdapter;
 import com.wy.demo.myinterface.OnClickListener;
-import com.wy.demo.view.QueryCode;
-
 
 public class HomeFragment extends Fragment {
 
@@ -50,6 +48,7 @@ public class HomeFragment extends Fragment {
         adapter.addData("record_voice");
         adapter.addData("下拉菜单");
         adapter.addData("query_code");
+        adapter.addData("screenshots");
         rv_menu.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rv_menu.setAdapter(adapter);
         adapter.setOnItemClickListener(new OnClickListener() {
