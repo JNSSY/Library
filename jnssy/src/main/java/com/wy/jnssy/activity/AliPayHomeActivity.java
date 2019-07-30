@@ -16,7 +16,7 @@ import com.wy.jnssy.R;
  * Created by Administrator on 2018/12/12.
  */
 
-public class AliPayHomeActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener, View.OnClickListener {
+public class AliPayHomeActivity extends AppCompatActivity /*implements AppBarLayout.OnOffsetChangedListener, View.OnClickListener */ {
 
     private AppBarLayout mAppBarLayout;
     private View mToolbarOpenBgView;
@@ -34,13 +34,13 @@ public class AliPayHomeActivity extends AppCompatActivity implements AppBarLayou
 
         setContentView(R.layout.activity_alipay_home);
 
-        initView();
-
-        mAppBarLayout.addOnOffsetChangedListener(this);
+//        initView();
+//
+//        mAppBarLayout.addOnOffsetChangedListener(this);
 
     }
 
-    private void initView() {
+   /* private void initView() {
         mToolbarOpenBgView = findViewById(R.id.toolbar_open_bg_view);
         mToolbarOpenLayout = findViewById(R.id.include_toolbar_open);
 
@@ -124,6 +124,6 @@ public class AliPayHomeActivity extends AppCompatActivity implements AppBarLayou
     protected void onDestroy() {
         super.onDestroy();
         mAppBarLayout.removeOnOffsetChangedListener(this);
-    }
+    }*/
 
 }
