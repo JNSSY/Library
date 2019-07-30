@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-//import com.facebook.drawee.view.SimpleDraweeView;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.wy.jnssy.R;
 import com.wy.jnssy.activity.UserInfoActivity;
 import com.wy.jnssy.view.WaterMarBg;
@@ -26,7 +26,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
     private TextView tv_watermark;
     private View view;
-    //    private SimpleDraweeView sdv;
+    private SimpleDraweeView sdv;
     private RelativeLayout rl_info;
     public static final int EDIT = 0x0001;
 
@@ -42,12 +42,12 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private void initView() {
         setWaterMark();
         initAction();
-//        showIconImage();
+        showIconImage();
     }
 
     private void findByIdView() {
         tv_watermark = view.findViewById(R.id.tv_watermark);
-//        sdv = view.findViewById(R.id.sdv);
+        sdv = view.findViewById(R.id.sdv);
         rl_info = view.findViewById(R.id.rl_info);
     }
 
@@ -59,7 +59,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         rl_info.setOnClickListener(this);
     }
 
-   /* private void showIconImage() {
+    private void showIconImage() {
         File icon_file = new File(getActivity().getExternalCacheDir() + File.separator + "user_icon");
         if (icon_file.exists()) {
             Uri uri = Uri.parse("file://" + icon_file.getAbsolutePath());
@@ -67,7 +67,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         } else {
             sdv.setImageResource(R.mipmap.ic_launcher);
         }
-    }*/
+    }
 
     @Override
     public void onClick(View v) {
@@ -83,7 +83,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             switch (requestCode) {
                 case EDIT:
                     String uri = data.getExtras().getString("path");
-//                    sdv.setImageURI(uri);
+                    sdv.setImageURI(uri);
                     break;
             }
         }

@@ -25,16 +25,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <application>
-        <activity android:name=".activity.CustomerViewActivity" />
-        <activity android:name=".activity.SnowActivity" />
-        <activity android:name=".activity.ClockActivity" />
-        <activity android:name=".activity.DialogActivity" />
-        <activity android:name=".activity.SelectionPhoneActivity" />
-        <activity android:name=".activity.AliPayHomeActivity" />
-        <activity android:name=".activity.ScrollingActivity" />
-        <activity android:name=".activity.QQMsgActivity" />
-    </application>
 </manifest>
 
 

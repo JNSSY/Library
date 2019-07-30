@@ -44,6 +44,13 @@
         <service android:name="com.wy.jnssy.service.MusicService" />
         <service android:name="com.wy.jnssy.service.RecorderService" />
 
+        <activity android:name="com.wy.jnssy.activity.CustomerViewActivity" />
+        <activity android:name="com.wy.jnssy.activity.ClockActivity" />
+        <activity android:name="com.wy.jnssy.activity.DialogActivity" />
+        <activity android:name="com.wy.jnssy.activity.SelectionPhoneActivity" />
+        <activity android:name="com.wy.jnssy.activity.AliPayHomeActivity" />
+        <activity android:name="com.wy.jnssy.activity.ScrollingActivity" />
+        <activity android:name="com.wy.jnssy.activity.QQMsgActivity" />
 
         <!--注册 存储照的容器-->
         <!--
