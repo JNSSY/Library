@@ -25,7 +25,6 @@ import com.wy.jnssy.activity.ScrollingActivity;
 import com.wy.jnssy.activity.SelectionPhoneActivity;
 import com.wy.jnssy.activity.SliderBarActivity;
 import com.wy.jnssy.activity.SnowActivity;
-import com.wy.jnssy.uitls.LocationUtils;
 
 import java.lang.reflect.Method;
 
@@ -39,7 +38,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
     private TextView tv_view, tv_clock, tv_dialog, tv_contact;
     private TextView tv_huawei;
     private SeekBar seekBar;
-    private TextView tv_location;
     private TextView tv_alipay_home;
     private TextView tv_qqmsg;
     private TextView tv_toolbar;
@@ -63,7 +61,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
         tv_dialog = view.findViewById(R.id.tv_dialog);
         tv_contact = view.findViewById(R.id.tv_contact);
         tv_huawei = view.findViewById(R.id.tv_huawei);
-        tv_location = view.findViewById(R.id.tv_location);
         tv_alipay_home = view.findViewById(R.id.tv_alipay_home);
         tv_qqmsg = view.findViewById(R.id.tv_qqmsg);
         tv_toolbar = view.findViewById(R.id.tv_toolbar);
@@ -78,7 +75,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
         tv_dialog.setOnClickListener(this);
         tv_contact.setOnClickListener(this);
         tv_huawei.setOnClickListener(this);
-        tv_location.setOnClickListener(this);
         tv_alipay_home.setOnClickListener(this);
         tv_qqmsg.setOnClickListener(this);
         tv_toolbar.setOnClickListener(this);
@@ -126,10 +122,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
             } else {
                 Toast.makeText(getActivity(), "非刘海屏", Toast.LENGTH_SHORT).show();
             }
-        } else if (i == R.id.tv_location) {
-            LocationUtils.initLocation(getActivity());//GPS定位室内无信号
-            Toast.makeText(getActivity(), LocationUtils.latitude + "\t" + LocationUtils.longitude, Toast.LENGTH_SHORT).show();
-            Log.e("wy", LocationUtils.latitude + "\t" + LocationUtils.longitude);
         } else if (i == R.id.tv_alipay_home) {
             startMyActivity(AliPayHomeActivity.class);
         } else if (i == R.id.tv_qqmsg) {
