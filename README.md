@@ -1,7 +1,7 @@
 # demo
 
 #### 介绍
-demo for all necessary function(test for bluetooth!)
+android开发公共资源库
 
 #### 软件架构
 软件架构说明
@@ -9,7 +9,15 @@ demo for all necessary function(test for bluetooth!)
 
 #### 安装教程
 
-1. xxxx
+1. 添加引用
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  
+  implementation 'com.github.JNSSY:Library:1.0.10'
 2. xxxx
 3. xxxx
 
