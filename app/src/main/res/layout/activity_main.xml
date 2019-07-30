@@ -12,7 +12,7 @@
 
 
     <fragment
-        android:name="com.wy.demo.fragment.LeftMenuFragment"
+        android:name="com.wy.jnssy.fragment.LeftMenuFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"

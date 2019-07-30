@@ -16,13 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wy.demo.R;
-import com.wy.demo.entity.Tab;
-import com.wy.demo.fragment.CartFragment;
-import com.wy.demo.fragment.CategoryFragment;
-import com.wy.demo.fragment.HomeFragment;
-import com.wy.demo.fragment.HotFragment;
-import com.wy.demo.fragment.MineFragment;
-import com.wy.demo.widget.FragmentTabHost;
+import com.wy.jnssy.entity.Tab;
+import com.wy.jnssy.fragment.CartFragment;
+import com.wy.jnssy.fragment.CategoryFragment;
+import com.wy.jnssy.fragment.HomeFragment;
+import com.wy.jnssy.fragment.HotFragment;
+import com.wy.jnssy.fragment.MineFragment;
+import com.wy.jnssy.widget.FragmentTabHost;
 
 import java.util.ArrayList;
 import java.util.List;

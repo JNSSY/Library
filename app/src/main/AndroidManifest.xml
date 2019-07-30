@@ -3,29 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wy.demo">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
 
     <application
-        android:name=".application.MyApp"
+        android:name="com.wy.jnssy.application.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -40,37 +20,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wy.demo.activity.SelectionPhoneActivity" />
-        <activity android:name="com.wy.demo.activity.CustomerViewActivity" />
-        <activity android:name="com.wy.demo.activity.AliPayHomeActivity" />
-        <activity android:name="com.wy.demo.activity.ClockActivity" />
-        <activity android:name="com.wy.demo.activity.DialogActivity" />
-        <activity android:name="com.wy.demo.activity.QQMsgActivity" />
-        <activity android:name="com.wy.demo.activity.ScrollingActivity" />
-        <activity android:name=".activity.Code2Activity" />
-        <activity android:name=".code2.activity.CaptureActivity" />
-        <activity android:name=".activity.UserInfoActivity" />
-        <activity android:name=".activity.BaseActivity" />
-        <activity android:name=".activity.MySurfaceActivity" />
-        <activity android:name=".activity.SliderBarActivity" />
-        <activity android:name=".activity.SnowActivity" />
-        <activity android:name=".activity.BluetoothActivity" />
-        <activity android:name=".bluetoothchat.BluetoothChatActivity" />
-        <activity android:name=".bluetoothchat.DeviceListActivity" />
-        <activity android:name=".activity.BluetoothChatActivity" />
-        <activity android:name=".activity.OpenBtActivity" />
-        <activity android:name=".activity.HuaweiVoiceActivity" />
-        <activity android:name=".activity.WangYiMusicActivity" />
-        <activity android:name=".activity.RecordActivity" />
-        <activity android:name=".activity.DropDownActivity" />
-        <activity android:name=".activity.QueryCodeActivity" />
+
+        <activity android:name="com.wy.jnssy.activity.Code2Activity" />
+        <activity android:name="com.wy.jnssy.code2.activity.CaptureActivity" />
+        <activity android:name="com.wy.jnssy.activity.UserInfoActivity" />
+        <activity android:name="com.wy.jnssy.activity.BaseActivity" />
+        <activity android:name="com.wy.jnssy.activity.MySurfaceActivity" />
+        <activity android:name="com.wy.jnssy.activity.SliderBarActivity" />
+        <activity android:name="com.wy.jnssy.activity.SnowActivity" />
+        <activity android:name="com.wy.jnssy.activity.BluetoothActivity" />
+        <activity android:name="com.wy.jnssy.bluetoothchat.BluetoothChatActivity" />
+        <activity android:name="com.wy.jnssy.bluetoothchat.DeviceListActivity" />
+        <activity android:name="com.wy.jnssy.activity.BluetoothChatActivity" />
+        <activity android:name="com.wy.jnssy.activity.OpenBtActivity" />
+        <activity android:name="com.wy.jnssy.activity.HuaweiVoiceActivity" />
+        <activity android:name="com.wy.jnssy.activity.WangYiMusicActivity" />
+        <activity android:name="com.wy.jnssy.activity.RecordActivity" />
+        <activity android:name="com.wy.jnssy.activity.DropDownActivity" />
+        <activity android:name="com.wy.jnssy.activity.QueryCodeActivity" />
 
 
-        <service android:name="com.wy.demo.service.InteractionService" />
-        <service android:name="com.wy.demo.service.UnInteractionService" />
-        <service android:name="com.wy.demo.service.WeatherService" />
-        <service android:name=".service.MusicService" />
-        <service android:name=".service.RecorderService" />
+        <service android:name="com.wy.jnssy.service.InteractionService" />
+        <service android:name="com.wy.jnssy.service.UnInteractionService" />
+        <service android:name="com.wy.jnssy.service.MusicService" />
+        <service android:name="com.wy.jnssy.service.RecorderService" />
 
 
         <!--注册 存储照的容器-->
