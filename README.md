@@ -9,20 +9,21 @@ android开发公共资源库
 
 #### 安装教程
 
-1. 
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1.添加引用
-allprojects {
+1. 添加引用
+	allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	} 
-implementation 'com.github.JNSSY:Library:1.0.10'
+	
+	implementation 'com.github.JNSSY:Library:1.0.10'
+2. xxxx
+3. xxxx
+
+#### 使用说明
+
+1.xxxx
 2. xxxx
 3. xxxx
 
