@@ -33,7 +33,6 @@
         <activity android:name="com.wy.jnssy.bluetoothchat.DeviceListActivity" />
         <activity android:name="com.wy.jnssy.activity.BluetoothChatActivity" />
         <activity android:name="com.wy.jnssy.activity.OpenBtActivity" />
-        <activity android:name="com.wy.jnssy.activity.HuaweiVoiceActivity" />
         <activity android:name="com.wy.jnssy.activity.WangYiMusicActivity" />
         <activity android:name="com.wy.jnssy.activity.RecordActivity" />
         <activity android:name="com.wy.jnssy.activity.DropDownActivity" />
