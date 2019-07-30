@@ -8,9 +8,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.SeekBar;
 import android.widget.Toast;
-
 
 import com.wy.jnssy.R;
 
@@ -23,7 +21,6 @@ public class MySurfaceActivity extends AppCompatActivity implements SurfaceHolde
     private Camera camera;
     private Camera.Parameters parameters;//获取camera的parameter实例
     private Camera.AutoFocusCallback callback;
-    private SeekBar sb;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +30,6 @@ public class MySurfaceActivity extends AppCompatActivity implements SurfaceHolde
         setContentView(R.layout.activity_surfaceview);
 
         surfaceView = findViewById(R.id.sv);
-        sb = findViewById(R.id.sb);
 
         surfaceHolder = surfaceView.getHolder();
         surfaceHolder.addCallback(this);
@@ -57,27 +53,6 @@ public class MySurfaceActivity extends AppCompatActivity implements SurfaceHolde
                 }
             }
         };
-
-
-
-        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                parameters.setZoom(progress);
-                camera.setParameters(parameters);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
     }
 
     @Override
@@ -105,12 +80,6 @@ public class MySurfaceActivity extends AppCompatActivity implements SurfaceHolde
         camera.setParameters(parameters);//把parameters设置给camera上
         camera.startPreview();//开始预览
         camera.setDisplayOrientation(90);//将预览旋转90度
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                sb.setMax(parameters.getMaxZoom());
-            }
-        });
     }
 
     private Camera.Size getOptimalPreviewSize(List<Camera.Size> sizes, int width, int height) {
