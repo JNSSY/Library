@@ -28,7 +28,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.drawee.view.SimpleDraweeView;
+//import com.facebook.drawee.view.SimpleDraweeView;
 import com.wy.jnssy.R;
 import com.wy.jnssy.activity.BaseActivity;
 
@@ -49,7 +49,7 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
     private static final int TAKE_PHONE = 1;
     private static final int PERMISSION_WRITE_EXTERNAL_STORAGE = 3;
     private static final int CHOOSE_FORM_ALBUM = 2;
-    private SimpleDraweeView sd_user_icon;
+    //    private SimpleDraweeView sd_user_icon;
     private static final int SHOW_COMPRESSED_IMAGE = 0x0001;
 
     private Handler handler = new Handler() {
@@ -60,7 +60,7 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
                 case SHOW_COMPRESSED_IMAGE:
                     File file = (File) msg.obj;
                     Uri uri = Uri.parse("file://" + file.getAbsolutePath());
-                    sd_user_icon.setImageURI(uri);
+//                    sd_user_icon.setImageURI(uri);
                     Intent intent = new Intent();
                     intent.putExtra("path", "file://"+uri);
                     setResult(RESULT_OK, intent);
@@ -75,10 +75,10 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
         setContentView(R.layout.activity_userinfo);
 
         initView();
-        initData();
+//        initData();
     }
 
-    private void initData() {
+    /*private void initData() {
         File icon_file = new File(getExternalCacheDir() + File.separator + "user_icon");
         if (icon_file.exists()) {
             Uri uri = Uri.parse("file://" + icon_file.getAbsolutePath());
@@ -86,12 +86,12 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
         } else {
             sd_user_icon.setImageResource(R.mipmap.ic_launcher);
         }
-    }
+    }*/
 
 
     private void initView() {
         ll_user_icon = findViewById(R.id.ll_user_icon);
-        sd_user_icon = findViewById(R.id.sd_user_icon);
+//        sd_user_icon = findViewById(R.id.sd_user_icon);
 
 
         ll_user_icon.setOnClickListener(this);

@@ -33,13 +33,13 @@
         android:layout_height="140dp"
         android:background="@color/colorPrimaryDark">
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <!--<com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/sdv"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="30dp"
-            app:roundAsCircle="true" />
+            app:roundAsCircle="true" />-->
 
         <LinearLayout
             android:padding="10dp"

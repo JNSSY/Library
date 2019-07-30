@@ -41,12 +41,12 @@
             android:textColor="@color/black"
             android:textSize="@dimen/smaller" />
 
-        <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/sd_user_icon"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="10dp"
-            app:roundAsCircle="true" />
+        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--android:id="@+id/sd_user_icon"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--app:roundAsCircle="true" />-->
 
         <ImageView
             android:layout_width="15dp"
