@@ -35,8 +35,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
     private View view;
     private TextView tv_view, tv_clock, tv_dialog, tv_contact;
     private TextView tv_huawei;
-    private SeekBar seekBar;
-    private TextView tv_alipay_home;
     private TextView tv_qqmsg;
     private TextView tv_code2;
     private TextView tv_sd;
@@ -54,11 +52,9 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
         tv_view = view.findViewById(R.id.tv_view);
         tv_clock = view.findViewById(R.id.tv_clock);
         tv_snow = view.findViewById(R.id.tv_snow);
-        seekBar = view.findViewById(R.id.seekBar);
         tv_dialog = view.findViewById(R.id.tv_dialog);
         tv_contact = view.findViewById(R.id.tv_contact);
         tv_huawei = view.findViewById(R.id.tv_huawei);
-        tv_alipay_home = view.findViewById(R.id.tv_alipay_home);
         tv_qqmsg = view.findViewById(R.id.tv_qqmsg);
         tv_code2 = view.findViewById(R.id.tv_code2);
         tv_sd = view.findViewById(R.id.tv_sd);
@@ -71,27 +67,10 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
         tv_dialog.setOnClickListener(this);
         tv_contact.setOnClickListener(this);
         tv_huawei.setOnClickListener(this);
-        tv_alipay_home.setOnClickListener(this);
         tv_qqmsg.setOnClickListener(this);
         tv_code2.setOnClickListener(this);
         tv_sd.setOnClickListener(this);
 
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                Log.e("wy", "progress: " + progress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
     }
 
 

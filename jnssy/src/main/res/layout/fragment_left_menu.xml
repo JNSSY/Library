@@ -68,13 +68,6 @@
                 android:padding="10dp"
                 android:text="clock" />
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:max="100"
-                android:padding="10dp" />
 
             <TextView
                 android:id="@+id/tv_dialog"
@@ -100,15 +93,6 @@
                 android:padding="10dp"
                 android:text="刘海屏" />
 
-
-            <TextView
-                android:id="@+id/tv_alipay_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="支付宝首页" />
 
             <TextView
                 android:id="@+id/tv_qqmsg"
