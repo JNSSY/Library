@@ -15,13 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wy.jnssy.R;
-import com.wy.jnssy.activity.AliPayHomeActivity;
 import com.wy.jnssy.activity.ClockActivity;
 import com.wy.jnssy.activity.Code2Activity;
 import com.wy.jnssy.activity.CustomerViewActivity;
 import com.wy.jnssy.activity.DialogActivity;
 import com.wy.jnssy.activity.QQMsgActivity;
-import com.wy.jnssy.activity.ScrollingActivity;
 import com.wy.jnssy.activity.SelectionPhoneActivity;
 import com.wy.jnssy.activity.SliderBarActivity;
 import com.wy.jnssy.activity.SnowActivity;
@@ -122,12 +120,8 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
             } else {
                 Toast.makeText(getActivity(), "非刘海屏", Toast.LENGTH_SHORT).show();
             }
-        } else if (i == R.id.tv_alipay_home) {
-            startMyActivity(AliPayHomeActivity.class);
         } else if (i == R.id.tv_qqmsg) {
             startMyActivity(QQMsgActivity.class);
-        } else if (i == R.id.tv_toolbar) {
-            startMyActivity(ScrollingActivity.class);
         } else if (i == R.id.tv_code2) {
             startMyActivity(Code2Activity.class);
         } else if (i == R.id.tv_sd) {
