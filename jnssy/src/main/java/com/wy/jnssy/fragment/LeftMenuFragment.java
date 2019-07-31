@@ -38,7 +38,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
     private SeekBar seekBar;
     private TextView tv_alipay_home;
     private TextView tv_qqmsg;
-    private TextView tv_toolbar;
     private TextView tv_code2;
     private TextView tv_sd;
     private TextView tv_snow;
@@ -61,7 +60,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
         tv_huawei = view.findViewById(R.id.tv_huawei);
         tv_alipay_home = view.findViewById(R.id.tv_alipay_home);
         tv_qqmsg = view.findViewById(R.id.tv_qqmsg);
-        tv_toolbar = view.findViewById(R.id.tv_toolbar);
         tv_code2 = view.findViewById(R.id.tv_code2);
         tv_sd = view.findViewById(R.id.tv_sd);
     }
@@ -75,7 +73,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
         tv_huawei.setOnClickListener(this);
         tv_alipay_home.setOnClickListener(this);
         tv_qqmsg.setOnClickListener(this);
-        tv_toolbar.setOnClickListener(this);
         tv_code2.setOnClickListener(this);
         tv_sd.setOnClickListener(this);
 
