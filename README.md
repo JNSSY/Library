@@ -17,7 +17,7 @@ android开发公共资源库
 		}
 	} 
 	
-	implementation 'com.github.JNSSY:Library:1.0.10'
+	implementation 'com.github.JNSSY:Library:1.0.16'
 2. xxxx
 3. xxxx
 
