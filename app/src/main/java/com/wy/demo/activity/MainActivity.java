@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -91,22 +92,22 @@ public class MainActivity extends AppCompatActivity {
 
     private View buildIndicator(Tab tab) {
         View view = mInflater.inflate(R.layout.tab_indicator, null);
-        ImageView img = (ImageView) view.findViewById(R.id.icon_tab);
-        TextView text = (TextView) view.findViewById(R.id.txt_indicator);
+        ImageView img = view.findViewById(R.id.icon_tab);
+        TextView text = view.findViewById(R.id.txt_indicator);
         img.setBackgroundResource(tab.getIcon());
         text.setText(tab.getTitle());
         return view;
     }
 
 
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            exit();
-//            return false;
-//        }
-//        return super.onKeyDown(keyCode, event);
-//    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exit();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     private void exit() {
         if (!isExit) {

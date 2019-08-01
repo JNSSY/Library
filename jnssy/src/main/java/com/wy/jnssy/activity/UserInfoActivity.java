@@ -17,6 +17,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -30,7 +31,6 @@ import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.wy.jnssy.R;
-import com.wy.jnssy.activity.BaseActivity;
 
 import java.io.File;
 
@@ -46,6 +46,7 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
     private LinearLayout ll_user_icon;
     private PopupWindow popupWindow;
     private Uri imageUri;
+    private Toolbar ay_edit_back_tb;
     private static final int TAKE_PHONE = 1;
     private static final int PERMISSION_WRITE_EXTERNAL_STORAGE = 3;
     private static final int CHOOSE_FORM_ALBUM = 2;
@@ -90,11 +91,18 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
 
 
     private void initView() {
+        ay_edit_back_tb = findViewById(R.id.ay_edit_back_tb);
         ll_user_icon = findViewById(R.id.ll_user_icon);
         sd_user_icon = findViewById(R.id.sd_user_icon);
 
 
         ll_user_icon.setOnClickListener(this);
+        ay_edit_back_tb.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
