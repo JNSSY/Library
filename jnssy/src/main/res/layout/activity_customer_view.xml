@@ -7,26 +7,50 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <ScrollView
+        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="wrap_content">
 
-        <com.wy.jnssy.view.CircleImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:bg_circle="@color/colorPrimaryDark"
-            app:num="1"
-            app:num_color="@color/white" />
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            <!--圆中间有数字-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
 
-        <com.wy.jnssy.view.TestView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                <com.wy.jnssy.view.CircleImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:bg_circle="@color/colorPrimaryDark"
+                    app:num="1"
+                    app:num_color="@color/white" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <!--圆、矩形-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.wy.jnssy.view.TestView
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp" />
+
+            </LinearLayout>
+
+            <!--实现圆形进度条-->
+            <com.wy.jnssy.view.CircleBarView
+                android:id="@+id/cbv"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>
