@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,10 +22,10 @@ import com.wy.jnssy.bluetoothchat.DeviceListActivity;
 
 
 /**
- * Created by zhenghangxia on 17-5-26.
+ * Created by wy on 17-5-26.
  */
 
-public class BluetoothChatActivity extends AppCompatActivity implements View.OnClickListener {
+public class BluetoothChatActivity extends BaseActivity implements View.OnClickListener {
 
     private static final int REQUEST_ENABLE_BT = 0x00;
     private static final int REQUEST_CONNECT_DEVICE = 0x02;

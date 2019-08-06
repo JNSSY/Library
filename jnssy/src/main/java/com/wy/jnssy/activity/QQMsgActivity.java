@@ -17,7 +17,7 @@ import com.wy.jnssy.view.QQMsgView;
  * Created by wy on 2018/12/12.
  */
 
-public class QQMsgActivity extends AppCompatActivity {
+public class QQMsgActivity extends BaseActivity {
 
     private Button resetBtn, msgCountBtn;
     private QQMsgView qqMsgView;

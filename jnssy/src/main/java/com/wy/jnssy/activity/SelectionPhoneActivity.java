@@ -25,7 +25,7 @@ import com.wy.jnssy.R;
  * Created by Administrator on 2018/9/4.
  */
 @RequiresApi(api = Build.VERSION_CODES.M)
-public class SelectionPhoneActivity extends AppCompatActivity implements View.OnClickListener {
+public class SelectionPhoneActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView tv_selection;
 

@@ -7,7 +7,7 @@ import com.wy.jnssy.R;
 import com.wy.jnssy.view.FallObject;
 import com.wy.jnssy.view.FallingView;
 
-public class SnowActivity extends AppCompatActivity {
+public class SnowActivity extends BaseActivity {
 
     private FallingView fallingView;
     @Override

@@ -8,7 +8,6 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -24,7 +23,7 @@ import com.wy.jnssy.widget.Decoration;
 import java.util.ArrayList;
 
 
-public class BluetoothActivity extends AppCompatActivity implements View.OnClickListener {
+public class BluetoothActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView tv_search,tv_app_info;
     private RecyclerView rv_paired, rv_enable;

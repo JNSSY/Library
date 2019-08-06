@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.wy.jnssy.R;
 
-public class DropDownActivity  extends AppCompatActivity {
+public class DropDownActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

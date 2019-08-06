@@ -3,7 +3,6 @@ package com.wy.jnssy.activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextClock;
 
 import com.wy.jnssy.R;
@@ -14,7 +13,7 @@ import com.wy.jnssy.R;
  * Created by wy on 2018/8/21.
  */
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
-public class ClockActivity extends AppCompatActivity {
+public class ClockActivity extends BaseActivity {
 
     private TextClock tc_time;
 

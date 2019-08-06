@@ -17,7 +17,7 @@ import android.widget.Toast;
 @RequiresApi(api = Build.VERSION_CODES.M)
 @SuppressWarnings("all")
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
     public static final String[] PERMISSIONS = {
             Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,

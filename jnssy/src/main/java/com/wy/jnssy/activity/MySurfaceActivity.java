@@ -3,7 +3,6 @@ package com.wy.jnssy.activity;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -14,7 +13,7 @@ import com.wy.jnssy.R;
 
 import java.util.List;
 
-public class MySurfaceActivity extends AppCompatActivity implements SurfaceHolder.Callback {
+public class MySurfaceActivity extends BaseActivity implements SurfaceHolder.Callback {
 
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;

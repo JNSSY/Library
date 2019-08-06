@@ -31,7 +31,7 @@ import static android.bluetooth.BluetoothAdapter.STATE_ON;
 import static android.bluetooth.BluetoothAdapter.STATE_TURNING_OFF;
 import static android.bluetooth.BluetoothAdapter.STATE_TURNING_ON;
 
-public class OpenBtActivity extends AppCompatActivity implements View.OnClickListener {
+public class OpenBtActivity extends BaseActivity implements View.OnClickListener {
 
     public static BluetoothAdapter btAdapter;
     private int REQUEST_OPEN_BT = 0x0000;

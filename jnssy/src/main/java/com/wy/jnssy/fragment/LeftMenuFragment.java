@@ -33,7 +33,7 @@ import java.lang.reflect.Method;
 public class LeftMenuFragment extends Fragment implements View.OnClickListener {
 
     private View view;
-    private TextView tv_view, tv_clock, tv_dialog, tv_contact;
+    private TextView tv_clock, tv_dialog, tv_contact;
     private TextView tv_huawei;
     private TextView tv_qqmsg;
     private TextView tv_code2;
@@ -49,7 +49,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView() {
-        tv_view = view.findViewById(R.id.tv_view);
         tv_clock = view.findViewById(R.id.tv_clock);
         tv_snow = view.findViewById(R.id.tv_snow);
         tv_dialog = view.findViewById(R.id.tv_dialog);
@@ -61,7 +60,6 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initAction() {
-        tv_view.setOnClickListener(this);
         tv_clock.setOnClickListener(this);
         tv_snow.setOnClickListener(this);
         tv_dialog.setOnClickListener(this);
@@ -78,9 +76,7 @@ public class LeftMenuFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         int i = view.getId();
-        if (i == R.id.tv_view) {
-            startMyActivity(CustomerViewActivity.class);
-        } else if (i == R.id.tv_snow) {
+        if (i == R.id.tv_snow) {
             startMyActivity(SnowActivity.class);
         } else if (i == R.id.tv_clock) {
             startMyActivity(ClockActivity.class);

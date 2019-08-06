@@ -17,7 +17,7 @@ import com.wy.jnssy.service.RecorderService;
 import java.io.File;
 import java.io.IOException;
 
-public class RecordActivity extends AppCompatActivity {
+public class RecordActivity extends BaseActivity {
     private TextView tv_record, tv_call, tv_play;
     private EditText et_phone_num;
     private String recordPath;

@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +22,7 @@ import java.util.Calendar;
  * Created by Administrator on 2018/8/27.
  */
 @RequiresApi(api = Build.VERSION_CODES.N)
-public class DialogActivity extends AppCompatActivity implements View.OnClickListener {
+public class DialogActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView tv_show;
     private TextView tv_date, tv_time;
@@ -32,11 +31,11 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
-        tv_show = (TextView) findViewById(R.id.tv_show);
+        tv_show = findViewById(R.id.tv_show);
         tv_show.setOnClickListener(this);
 
-        tv_date = (TextView) findViewById(R.id.tv_date);
-        tv_time = (TextView) findViewById(R.id.tv_time);
+        tv_date = findViewById(R.id.tv_date);
+        tv_time = findViewById(R.id.tv_time);
 
         tv_date.setOnClickListener(this);
         tv_time.setOnClickListener(this);

@@ -15,7 +15,7 @@ import com.wy.jnssy.R;
 import com.wy.jnssy.code2.activity.CaptureActivity;
 import com.wy.jnssy.code2.common.BitmapUtils;
 
-public class Code2Activity extends AppCompatActivity implements View.OnClickListener {
+public class Code2Activity extends BaseActivity implements View.OnClickListener {
 
     private Button mBtn1;
     private EditText mEt;

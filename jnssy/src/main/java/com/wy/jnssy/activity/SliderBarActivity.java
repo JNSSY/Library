@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SliderBarActivity extends AppCompatActivity implements SideBar.OnChooseLetterChangedListener {
+public class SliderBarActivity extends BaseActivity implements SideBar.OnChooseLetterChangedListener {
 
     private List<User> userList;
 
