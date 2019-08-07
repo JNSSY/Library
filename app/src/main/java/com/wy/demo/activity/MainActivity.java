@@ -1,9 +1,12 @@
 package com.wy.demo.activity;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -23,12 +26,14 @@ import com.wy.jnssy.fragment.CategoryFragment;
 import com.wy.jnssy.fragment.HomeFragment;
 import com.wy.jnssy.fragment.HotFragment;
 import com.wy.jnssy.fragment.MineFragment;
+import com.wy.jnssy.uitls.PermissionUtils;
 import com.wy.jnssy.widget.FragmentTabHost;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SuppressLint("HandlerLeak")
+@RequiresApi(api = Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
 
     private LayoutInflater mInflater;
@@ -37,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean isExit = false;
     private StringBuffer sb = new StringBuffer();
     private List<Tab> tabList = new ArrayList<>(5);
-
+    private PermissionUtils pUtils;
+    private int index = 0;
 
     Handler mHandler = new Handler() {
         @Override
@@ -55,8 +61,18 @@ public class MainActivity extends AppCompatActivity {
         initView();
         initAction();
         initTab();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            initPermission();
+        }
     }
 
+
+    private void initPermission() {
+        pUtils = new PermissionUtils();
+        pUtils.init(this);
+        pUtils.requestPermission(index);
+
+    }
 
     private void initView() {
     }
@@ -131,5 +147,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        pUtils.requestPermission(++index);
+    }
 }

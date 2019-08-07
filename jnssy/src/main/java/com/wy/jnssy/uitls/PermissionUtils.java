@@ -5,38 +5,44 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
- * Created by wangyue on 2019/2/27.
+ * Created by wy on 2019/2/27.
  */
-@SuppressWarnings("all")
 @RequiresApi(api = Build.VERSION_CODES.M)
 
 public class PermissionUtils {
 
-    private static final String[] PERMISSIONS = {
+    private String[] PERMISSIONS = {
             Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.ACCESS_FINE_LOCATION};
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.READ_CONTACTS,
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.RECORD_AUDIO,
+    };
 
-    private int permissionIndex = 0;
+    private int[] perCode = {
+            0x1000, 0x1001, 0x1002, 0x1003, 0x1004, 0x1005
+    };
 
-    private void init(Activity activity) {
-        if (Build.VERSION.SDK_INT > 23) {
-            checkPermission(activity);
-        }
+    private Activity activity;
+
+    public void init(Activity activity) {
+        this.activity = activity;
     }
 
 
-    private void checkPermission(Activity activity) {
-        if (permissionIndex < PERMISSIONS.length) {
-            int checkSelfPermission = activity.checkSelfPermission(PERMISSIONS[permissionIndex]);
+    public void requestPermission(int index) {
+        if (index < PERMISSIONS.length) {
+            int checkSelfPermission = activity.checkSelfPermission(PERMISSIONS[index]);
             if (checkSelfPermission != PackageManager.PERMISSION_GRANTED) {
-                activity.requestPermissions(new String[]{PERMISSIONS[permissionIndex]}, 1001);
-            } else {
-                Toast.makeText(activity, "权限都已申请到！", Toast.LENGTH_SHORT).show();
+                activity.requestPermissions(new String[]{PERMISSIONS[index]}, perCode[index]);
             }
         }
     }
+
+
 }
