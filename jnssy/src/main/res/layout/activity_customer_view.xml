@@ -8,9 +8,9 @@
 
 
     <ScrollView
-        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,12 +41,26 @@
 
             </LinearLayout>
 
-            <!--实现圆形进度条-->
-            <com.wy.jnssy.view.CircleBarView
-                android:id="@+id/cbv"
-                android:background="@color/colorPrimary"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <!--实现圆形进度条-->
+                <com.wy.jnssy.view.CircleBarView
+                    android:id="@+id/cbv"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+
+                <com.wy.jnssy.view.SwitchButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    app:sb_checked_color="@color/colorPrimary"
+                    app:sb_show_indicator="false" />
+            </LinearLayout>
 
         </LinearLayout>
 
