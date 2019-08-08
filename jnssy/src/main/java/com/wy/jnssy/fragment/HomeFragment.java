@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.wy.jnssy.R;
 import com.wy.jnssy.activity.CustomerViewActivity;
 import com.wy.jnssy.activity.DropDownActivity;
+import com.wy.jnssy.activity.LoadingActivity;
 import com.wy.jnssy.activity.OpenBtActivity;
 import com.wy.jnssy.activity.QueryCodeActivity;
 import com.wy.jnssy.activity.RecordActivity;
@@ -46,6 +47,7 @@ public class HomeFragment extends Fragment {
         adapter.addData("record_voice");
         adapter.addData("下拉菜单");
         adapter.addData("query_code");
+        adapter.addData("loading");
         rv_menu.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rv_menu.setAdapter(adapter);
         adapter.setOnItemClickListener(new OnClickListener() {
@@ -83,6 +85,10 @@ public class HomeFragment extends Fragment {
         }
         if (str.equals("query_code")){
             Intent intent=new Intent(getActivity(), QueryCodeActivity.class);
+            startActivity(intent);
+        }
+        if (str.equals("loading")) {
+            Intent intent = new Intent(getActivity(), LoadingActivity.class);
             startActivity(intent);
         }
     }

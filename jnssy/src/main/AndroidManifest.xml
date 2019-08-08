@@ -25,6 +25,9 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <application>
+        <activity android:name=".activity.LoadingActivity" />
+    </application>
 </manifest>
 
 
