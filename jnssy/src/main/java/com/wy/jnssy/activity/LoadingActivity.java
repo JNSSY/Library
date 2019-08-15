@@ -14,6 +14,7 @@ import com.wy.jnssy.uitls.LoadingNormal;
 public class LoadingActivity extends BaseActivity {
 
     private LoadingCircle loadingCircle;
+    private LoadingNormal loadingNormal;
     private Context context;
 
     @Override
@@ -24,7 +25,7 @@ public class LoadingActivity extends BaseActivity {
         context = this;
 
         loadingCircle = new LoadingCircle(this, true);
-
+        loadingNormal = new LoadingNormal(context, true);
 
         findViewById(R.id.bt_show_loading).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +37,6 @@ public class LoadingActivity extends BaseActivity {
         findViewById(R.id.bt_progress_loading).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoadingNormal loadingNormal = new LoadingNormal(context, true);
                 loadingNormal.showProgress("正在加载中，请稍后...");
             }
         });
