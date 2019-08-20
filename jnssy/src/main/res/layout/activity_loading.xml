@@ -16,4 +16,10 @@
         android:layout_height="wrap_content"
         android:text="普通等待层" />
 
+    <Button
+        android:id="@+id/bt_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="崩溃日志" />
+
 </LinearLayout>

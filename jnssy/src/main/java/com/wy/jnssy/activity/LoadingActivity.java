@@ -1,9 +1,7 @@
 package com.wy.jnssy.activity;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.View;
 
@@ -41,6 +39,15 @@ public class LoadingActivity extends BaseActivity {
             }
         });
 
+        findViewById(R.id.bt_log).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int q = Integer.parseInt("q");
+            }
+        });
+
+
 
     }
+
 }
