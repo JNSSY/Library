@@ -14,7 +14,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -25,9 +24,8 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-@SuppressLint("SimpleDateFormat")
+@SuppressWarnings("all")
 public class CrashHandler implements UncaughtExceptionHandler {
-    private static final String TAG = "wy";
     private boolean ISDEBUG = true;
     private Thread.UncaughtExceptionHandler mDefaultHandler;// 系统默认的UncaughtException处理类
     private static CrashHandler INSTANCE = new CrashHandler();// CrashHandler实例
@@ -39,7 +37,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
      * 保证只有一个CrashHandler实例
      */
     private CrashHandler() {
-
     }
 
     /**
@@ -51,8 +48,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
     /**
      * 初始化
-     *
-     * @param context
      */
     public void init(Context context) {
         mContext = context;
@@ -81,11 +76,8 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
     /**
      * 自定义错误处理,收集错误信息 发送错误报告等操作均在此完成.
-     *
-     * @param ex 异常信息
-     * @return true 如果处理了该异常信息;否则返回false.
      */
-    public boolean handleException(Throwable ex) {
+    private boolean handleException(Throwable ex) {
         if (ex == null)
             return false;
         new Thread() {
@@ -106,10 +98,8 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
     /**
      * 收集设备参数信息
-     *
-     * @param context
      */
-    public void collectDeviceInfo(Context context) {
+    private void collectDeviceInfo(Context context) {
         try {
             PackageManager pm = context.getPackageManager();// 获得包管理器
             PackageInfo pi = pm.getPackageInfo(context.getPackageName(),
@@ -130,7 +120,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
             try {
                 field.setAccessible(true);
                 info.put(field.getName(), field.get("").toString());
-                Log.d(TAG, field.getName() + ":" + field.get(""));
             } catch (IllegalArgumentException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
@@ -141,8 +130,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
     /**
      * 保存报错信息到文件中
-     *
-     * @param ex
      */
     private void saveCrashInfo2File(Throwable ex) {
         StringBuffer sb = new StringBuffer();
@@ -171,7 +158,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
                 Environment.MEDIA_MOUNTED)) {
             try {
                 File dir = new File(mContext.getExternalCacheDir() + File.separator + "crash");
-                Log.i("CrashHandler", dir.toString());
                 if (!dir.exists())
                     dir.mkdir();
                 FileOutputStream fos = new FileOutputStream(new File(dir,
