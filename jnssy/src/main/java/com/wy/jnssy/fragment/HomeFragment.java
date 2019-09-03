@@ -16,9 +16,11 @@ import com.wy.jnssy.activity.LoadingActivity;
 import com.wy.jnssy.activity.OpenBtActivity;
 import com.wy.jnssy.activity.QueryCodeActivity;
 import com.wy.jnssy.activity.RecordActivity;
+import com.wy.jnssy.activity.SurfaceViewActivity;
 import com.wy.jnssy.activity.WangYiMusicActivity;
 import com.wy.jnssy.adapter.HomeMenuFragmentAdapter;
 import com.wy.jnssy.myinterface.OnClickListener;
+import com.wy.lib.ImageSelectActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -35,6 +37,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+
     private void initView() {
         rv_menu = view.findViewById(R.id.rv_menu);
     }
@@ -48,6 +51,8 @@ public class HomeFragment extends Fragment {
         adapter.addData("下拉菜单");
         adapter.addData("query_code");
         adapter.addData("loading");
+        adapter.addData("多图上传");
+        adapter.addData("SVIEW");
         rv_menu.setLayoutManager(new GridLayoutManager(getContext(), 4));
         rv_menu.setAdapter(adapter);
         adapter.setOnItemClickListener(new OnClickListener() {
@@ -89,6 +94,14 @@ public class HomeFragment extends Fragment {
         }
         if (str.equals("loading")) {
             Intent intent = new Intent(getActivity(), LoadingActivity.class);
+            startActivity(intent);
+        }
+        if (str.equals("多图上传")) {
+            Intent intent = new Intent(getActivity(), ImageSelectActivity.class);
+            startActivity(intent);
+        }
+        if (str.equals("SVIEW")) {
+            Intent intent = new Intent(getActivity(), SurfaceViewActivity.class);
             startActivity(intent);
         }
     }

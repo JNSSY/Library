@@ -127,4 +127,7 @@
 
     <string name="connect">连接设备</string>
     <string name="discoverable">允许发现</string>
+
+
+    <string name="wireless_voting_screen">无线投屏</string>
 </resources>

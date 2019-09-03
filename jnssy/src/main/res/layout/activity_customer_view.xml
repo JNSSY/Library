@@ -18,17 +18,16 @@
             android:orientation="vertical">
 
             <!--圆中间有数字-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp">
 
-                <com.wy.jnssy.view.CircleImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:bg_circle="@color/colorPrimaryDark"
-                    app:num="1"
-                    app:num_color="@color/white" />
-            </LinearLayout>
+            <com.wy.jnssy.view.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:bg_circle="@color/colorPrimaryDark"
+                app:num="1"
+                app:num_color="@color/white" />
 
             <!--圆、矩形-->
             <LinearLayout
@@ -61,10 +60,10 @@
                     app:sb_show_indicator="false" />
 
                 <com.wy.jnssy.view.LoadCircleView
-                    android:background="@color/white"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp" />
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white" />
 
             </LinearLayout>
 

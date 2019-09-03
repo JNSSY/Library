@@ -23,6 +23,10 @@ public class CircleBarView extends View {
     private float progressNum;//可以更新的进度条数值
     private float maxNum = 100;//进度条最大值
 
+    public CircleBarView(Context context) {
+        this(context, null);
+    }
+
     public CircleBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
@@ -43,6 +47,8 @@ public class CircleBarView extends View {
 
 
         anim = new CircleAnim();
+
+        setProgressNum(100, 3000);
     }
 
     @Override

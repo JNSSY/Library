@@ -49,7 +49,6 @@
         <activity android:name="com.wy.jnssy.activity.DialogActivity" />
         <activity android:name="com.wy.jnssy.activity.SelectionPhoneActivity" />
         <activity android:name="com.wy.jnssy.activity.QQMsgActivity" />
-
         <!--注册 存储照的容器-->
         <!--
         name:属性值，固定写法

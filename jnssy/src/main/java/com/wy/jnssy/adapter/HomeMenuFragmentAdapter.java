@@ -82,6 +82,14 @@ public class HomeMenuFragmentAdapter extends RecyclerView.Adapter<HomeMenuFragme
             holder.tv_menu.setText("等待层");
             holder.iv_view.setImageResource(R.mipmap.icon_loading);
         }
+        if (str.equals("多图上传")) {
+            holder.tv_menu.setText("多图上传");
+            holder.iv_view.setImageResource(R.mipmap.icon_cat);
+        }
+       /* if (str.equals("SVIEW")) {
+            holder.tv_menu.setText("SVIEW");
+            holder.iv_view.setImageResource(R.mipmap.icon_cat);
+        }*/
     }
 
     @Override
