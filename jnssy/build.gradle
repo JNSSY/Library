@@ -40,7 +40,7 @@ dependencies {
     implementation files('libs/zxing-3.1.1.jar')
     implementation files('libs/pinyin4j-2.5.0.jar')
     implementation 'top.zibin:Luban:1.1.8'
-    implementation 'com.github.JNSSY:YWangPicImage:1.0.0'
+    implementation 'com.github.JNSSY:YWangPicImage:1.0.10'
     implementation 'com.google.code.gson:gson:2.8.1'
     implementation 'com.rmtheis:tess-two:9.0.0'
     implementation 'org.jetbrains:annotations-java5:15.0'
